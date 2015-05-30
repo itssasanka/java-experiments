@@ -62,7 +62,6 @@ public class Intervals {
             }
         }
         System.out.println(total);
-
     }
 
 
