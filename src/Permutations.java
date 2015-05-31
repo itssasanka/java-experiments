@@ -1,5 +1,3 @@
-import java.util.logging.Logger;
-
 /**
  * Created by sasanka on 5/31/15.
  */
@@ -7,7 +5,7 @@ import java.util.logging.Logger;
 public class Permutations {
     public static void main(String args[]) {
         Permutations permutations = new Permutations();
-        permutations.jumble("1234567890");
+        permutations.jumble("1324567890");
     }
 
     public void jumble(String toJumble) {
@@ -25,9 +23,7 @@ public class Permutations {
         }
     }
 
-
     public String removeCharacter(String original, char character) {
-
         return original.substring(0, original.indexOf(character))
                 + original.substring(original.indexOf(character) + 1);
     }
