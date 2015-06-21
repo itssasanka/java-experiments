@@ -4,6 +4,7 @@ import java.util.Map;
 /**
  * Created by sasanka on 6/21/15.
  */
+// Given two strings, tell if they're anagrams of each other or not.
 public class Anagrams {
 
     public static void main(String args[]) {
