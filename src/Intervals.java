@@ -43,7 +43,7 @@ public class Intervals {
         MyPair p4 = new MyPair(8, 12);
 
         intervals.countTotalLength(Arrays.asList(p1, p2, p3, p4));
-        intervals.countTotalLengthUsingSort(Arrays.asList(p1, p2, p3, p4));
+        intervals.countTotalLengthUsingSort(Arrays.asList(p1, p2, p3, p4)); // This will be the correct answer
 
     }
 
