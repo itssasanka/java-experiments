@@ -17,20 +17,20 @@ public class GroupAnagramsTogether {
             strings[i] = String.valueOf(stringCharacters);
         }
 
-        Map<String, Intervals.Pair> groupMap = new TreeMap<>();
+        Map<String, Intervals.MyPair> groupMap = new TreeMap<>();
         for(int i=0;i<strings.length;i++) {
             if (groupMap.containsKey(strings[i])) {
-                Intervals.Pair currentPair = groupMap.get(strings[i]);
-                groupMap.put(strings[i], new Intervals.Pair(currentPair.getLeft(), currentPair.getRight() + 1));
+                Intervals.MyPair currentPair = groupMap.get(strings[i]);
+                groupMap.put(strings[i], new Intervals.MyPair(currentPair.getLeft(), currentPair.getRight() + 1));
             }
             else {
-                groupMap.put(strings[i], new Intervals.Pair(i, 1));
+                groupMap.put(strings[i], new Intervals.MyPair(i, 1));
             }
         }
 
         List<String> finalList = new ArrayList<>();
 
-        for (Map.Entry<String, Intervals.Pair> entry : groupMap.entrySet()) {
+        for (Map.Entry<String, Intervals.MyPair> entry : groupMap.entrySet()) {
             for (int i = 0; i < entry.getValue().getRight(); i++) {
                 finalList.add(entry.getKey());
             }
