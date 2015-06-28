@@ -64,5 +64,20 @@ public class Intervals {
         System.out.println(total);
     }
 
+    public void countTotalLengthUsingSort(List<Pair> intervals) {
+        //First sort the list according to the start times.
+        Pair[] intervalsArray = (Pair[]) intervals.toArray();
+        for(int i=1;i<intervalsArray.length;i++) {
+
+            for (int j = i; j >= 0; j--) {
+
+            }
+
+        }
+
+
+
+    }
+
 
 }
