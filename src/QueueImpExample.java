@@ -7,7 +7,6 @@ public class QueueImpExample {
         queueImp.enQueue(1);
         queueImp.enQueue(2);
         queueImp.enQueue(3);
-        queueImp.enQueue(3);
 
         System.out.println(queueImp.print());
 
@@ -15,6 +14,6 @@ public class QueueImpExample {
         queueImp.deQueue();
         queueImp.deQueue();
 
-        System.out.println(queueImp.print()+"ASXAS");
+        System.out.println(queueImp.print());
     }
 }
