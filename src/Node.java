@@ -17,11 +17,11 @@ public class Node {
         if (sourceNode == null) {
             return null;
         }
-        Node node = new Node();
-        node.setValue(sourceNode.value);
-        node.setNext(sourceNode.getNext());
+        Node newNode = new Node();
+        newNode.setValue(sourceNode.value);
+        newNode.setNext(sourceNode.getNext());
 
-        return node;
+        return newNode;
     }
 
     public Integer getValue() {
