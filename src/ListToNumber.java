@@ -10,7 +10,7 @@ public class ListToNumber {
 
     public static void main(String[] args) {
         ListToNumber l = new ListToNumber();
-        l.listToNum(Arrays.asList(2, 3, 4,5,6,7,8));
+        l.listToNum(Arrays.asList(2, 3, 4, 5, 6, 7, 8));
     }
 
 
