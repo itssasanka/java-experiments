@@ -12,10 +12,10 @@ import utils.*;
 // return the 3rd element from the end;
 // Output : 7
 
-public class NthFromLastofList {
+public class NthFromLastOfList {
     public static void main(String[] args){
         ListImp l = new ListImp(7);
-        NthFromLastofList n = new NthFromLastofList();
+        NthFromLastOfList n = new NthFromLastOfList();
         try {
             l.add(2);
             l.add(3);
