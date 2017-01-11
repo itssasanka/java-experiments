@@ -1,4 +1,4 @@
-import java.util.List;
+package utils;
 
 /**
  * Created by Sasanka on 6/1/2015.
@@ -23,6 +23,10 @@ public class ListImp {
             }
             temp.setNext(new Node(value));
         }
+    }
+
+    public Node getHead(){
+        return this.head;
     }
 
     public Node remove(int position) {
