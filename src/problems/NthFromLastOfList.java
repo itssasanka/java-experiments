@@ -6,6 +6,8 @@ package problems;
 
 import utils.*;
 
+import javax.swing.tree.TreeNode;
+
 // Given a list, return the nth element from the end of the list
 // Example: 2->3->4->5->6->7->3->1
 
@@ -33,7 +35,10 @@ public class NthFromLastOfList {
 
     }
 
+
     public int nthFromLast(Node n, int pos){
+
+
         if (n.getNext() == null){
             return 1;
         }

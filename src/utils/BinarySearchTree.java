@@ -1,7 +1,10 @@
-package trees;
+package utils;
 
 import sun.reflect.generics.tree.Tree;
 import utils.TreeNode;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by sasanka on 1/25/17.
@@ -12,6 +15,10 @@ public class BinarySearchTree {
 
     public BinarySearchTree(int value){
         this.root = new TreeNode(value, null, null, null);
+    }
+
+    public TreeNode getRoot() {
+        return this.root;
     }
 
 
@@ -34,20 +41,58 @@ public class BinarySearchTree {
                 targetNode.setRight(newNode);
                 return;
             }
-            recursiveAddNode(newValue, targetNode);
+            recursiveAddNode(newValue, targetNode.getRight());
         }
     }
 
 
-    private String preOrderTree(TreeNode n, String result){
-        if(n == null){
-            return "";
+    public List<String> traverseTree(String mode){
+        List<String> result = new ArrayList<>();
+
+        switch(mode){
+            case "inOrder":
+                this.inOrderTree(this.root, result);
+                break;
+            case "preOrder":
+                this.preOrderTree(this.root, result);
+                break;
+            case "postOrder":
+                this.postOrderTree(this.root, result);
+                break;
+            default:
+                throw new IllegalArgumentException("Unknown mode");
         }
 
-        result = result + " " + n.toString();
+        return result;
+    }
+
+    private void preOrderTree(TreeNode n, List<String> result){
+        if(n == null){
+            return;
+        }
+
+        result.add(String.valueOf(n.getValue()));
         preOrderTree(n.getLeft(), result);
         preOrderTree(n.getRight(), result);
+    }
 
-        return result;
+    private void postOrderTree(TreeNode n, List<String> result){
+        if(n == null){
+            return;
+        }
+
+        postOrderTree(n.getLeft(), result);
+        postOrderTree(n.getRight(), result);
+        result.add(String.valueOf(n.getValue()));
+    }
+
+    private void inOrderTree(TreeNode n, List<String> result){
+        if(n == null){
+            return;
+        }
+
+        inOrderTree(n.getLeft(), result);
+        result.add(String.valueOf(n.getValue()));
+        inOrderTree(n.getRight(), result);
     }
 }

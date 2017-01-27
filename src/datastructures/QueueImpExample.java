@@ -1,4 +1,6 @@
-package utils;
+package datastructures;
+
+import utils.QueueImp;
 
 /**
  * Created by Sasanka on 7/3/2015.

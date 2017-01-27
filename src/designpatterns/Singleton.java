@@ -1,4 +1,4 @@
-package DesignPatterns;
+package designpatterns;
 
 /**
  * Created by sasanka on 9/19/16.
