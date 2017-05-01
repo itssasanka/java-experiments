@@ -1,11 +1,14 @@
 package utils;
 
+import javafx.util.Pair;
+
 /**
  * Created by Sasanka on 6/1/2015.
  */
 public class ListImp {
-    private int maxLength =0;
+    private int maxLength = 0;
     private Node head;
+
     public ListImp(int maxLength) {
         this.maxLength = maxLength;
     }
@@ -25,7 +28,7 @@ public class ListImp {
         }
     }
 
-    public Node getHead(){
+    public Node getHead() {
         return this.head;
     }
 
@@ -66,13 +69,13 @@ public class ListImp {
         return count;
     }
 
-    public void print(){
+    public void print() {
         if (head == null) {
             System.out.println("[]");
-        }else{
+        } else {
             Node temp = head;
             System.out.print("[ ");
-            while (temp!= null) {
+            while (temp != null) {
                 System.out.print(" " + temp.getValue() + " ");
                 temp = temp.getNext();
             }
@@ -86,7 +89,7 @@ public class ListImp {
         Node temp;
         Node previous = null;
         current = head;
-        while (current!= null) {
+        while (current != null) {
             temp = Node.copyNode(current.getNext());
             current.setNext(previous);
 
@@ -94,6 +97,23 @@ public class ListImp {
             current = temp;
         }
         head = previous;
+    }
+
+    public void reverseRecursive() {
+        Pair<Node, Node> result = reverseRecursive(head);
+        result.getKey().setNext(null);
+        this.head = result.getValue();
+    }
+
+    private Pair<Node, Node> reverseRecursive(Node cur) {
+        if (cur.getNext() == null) {
+            return new Pair<>(cur, cur);
+        }
+
+        Pair<Node, Node> after = reverseRecursive(cur.getNext());
+        after.getKey().setNext(cur);
+
+        return new Pair<>(cur, after.getValue());
     }
 
 }

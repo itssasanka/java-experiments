@@ -20,5 +20,13 @@ public class ListImpExample {
         listImp.reverse();
 
         listImp.print();
+
+
+        listImp = new ListImp(3);
+        listImp.add(1);
+        listImp.add(2);
+        listImp.add(3);
+        listImp.reverseRecursive();
+        listImp.print();
     }
 }
