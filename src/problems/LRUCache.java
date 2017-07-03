@@ -106,7 +106,6 @@ public class LRUCache {
         this.list.print();
     }
 
-
     // 1 2 3 4 5 4 6
     // With a size of 4, the LRU cache in the end must contain:
     //      6453
